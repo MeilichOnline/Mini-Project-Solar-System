@@ -1,0 +1,55 @@
+:root {
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    background-image: url(images/space-galaxy-background.jpg);
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.headlineArea {
+    color: rgba(255, 255, 255, .8);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 2em;
+    text-align: center;
+}
+
+.inputArea {
+    background-color: rgba(255, 255, 255, .4);
+    margin: 2em;
+}
+
+.planetArea {
+}
+
+.display-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-column {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+}
