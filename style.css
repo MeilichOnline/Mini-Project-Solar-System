@@ -16,15 +16,14 @@ body {
 
 body {
     background-image: url(images/space-galaxy-background.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top left;
+    background-position: center;
+    background-size: cover;
 
     display: grid;
     grid-template-areas: 
-    'header'
-    'content'
-    'planet';
+    "header"
+    "input"
+    "planet";
 }
 
 .headlineArea {
@@ -33,16 +32,21 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 2em;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .inputArea {
-    color: rgba(255, 255, 255, .8);
-    grid-area: content;
+    grid-area: input;
+    background-color: rgba(255, 255, 255, .4);
     margin: 2em;
+    justify-content: center;
+    align-items: center;
 }
 
 .planetArea {
     grid-area: planet;
+    position: relative;
 }
 
 .display-row {
@@ -61,10 +65,26 @@ body {
     align-items: center;
 }
 
+.result {
+    position: absolute;
+    background-color: gray;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    top: 50;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, .8);
+    background-color: rgba(0, 0, 0, .8);
+
+}
+
 @media (min-width:1024px) {
     body {
         grid-template-areas: 
         'header header'
-        'content planet';
+        'input planet';
     }
 }

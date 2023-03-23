@@ -14,16 +14,10 @@
         <h4>Day 24 - Mini Project Solar System</h4>
         <h6>Weight Comparison In The Solar System</h6>
     </div>
-    <div class="inputArea">
-        <div class="display-row">
-            <div class="display-column">
-                <p>Weight On Earth</p>
-                <input type="text" id="userInput">
-            </div>
-            <div class="display-column">
-                <p>On Earth It Weighs</p>
-                <input type="text" id="weightOutput" disabled>0
-            </div>
+    <div class="inputArea display-column">
+        <div class="display-column">
+            <p>Weight On Earth</p>
+            <input type="number" id="userInput" placeholder="Weight in KG">
         </div>
         <div class="display-column">
             <p>Choose Planet To Compare</p>
@@ -31,8 +25,11 @@
             </select>
         </div>
     </div>
-    <div class="display-row">
-        <img src="images/earth.png" alt="Earth">
+    <div class="planetArea display-column">
+        <img src="images/earth.png" alt="Earth" id="imagePlanet">
+        <div class="result">
+            <h1 id="weightOutput">0 KG</h1>
+        </div>
     </div>
 </body>
 </html>
