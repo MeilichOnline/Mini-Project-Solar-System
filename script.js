@@ -59,38 +59,37 @@ function calcWeight(weight) {
 function printWeight() {
     console.log(userInput.value)
     console.log(selectPlanet.value)
-    let gravity = 9.18
-    let radius = 6.371
+    let gravity = 1
     switch(selectPlanet.value){
         case 'Earth':
-            gravity = 9.18
-            break
-        case 'Venus':
-            gravity = 12
-            break
-        case 'Saturn':
-            gravity = 65
-            break
-        case 'Neptune':
-            gravity = 5
-            break
-        case 'Mercury':
             gravity = 1
             break
+        case 'Venus':
+            gravity = 0.9
+            break
+        case 'Saturn':
+            gravity = 1.07
+            break
+        case 'Neptune':
+            gravity = 1.14
+            break
+        case 'Mercury':
+            gravity = 2.53
+            break
         case 'Mars':
-            gravity = 43
+            gravity = 0.38
             break
         case 'Uranus':
-            gravity = 54
+            gravity = 0.91
             break
         case 'Moon':
-            gravity = 3
+            gravity = 0.16
             break
         case 'Pluto':
-            gravity = 34
+            gravity = 0.08
             break  
     }
-    /* g = G * M / r²*/
-    const weight = ((gravity * userInput.value) / (radius*radius)*1000)
+
+    const weight = gravity * userInput.value
     weightOutput.innerText = `${weight} KG`
 }
