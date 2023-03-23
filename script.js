@@ -51,14 +51,7 @@ userInput.addEventListener('change', (number) => {
     printWeight()
 })
 
-function calcWeight(weight) {
-    const result = weight <= 0 ? 0 : 
-    weightOutput.innerText = `${result} Kg`
-}
-
 function printWeight() {
-    console.log(userInput.value)
-    console.log(selectPlanet.value)
     let gravity = 1
     switch(selectPlanet.value){
         case 'Earth':
